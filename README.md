@@ -1,5 +1,7 @@
 # VisionQuiz AI
 
+[![CI](https://github.com/barakatwalid/Vision-Quiz-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/barakatwalid/Vision-Quiz-AI/actions/workflows/ci.yml)
+
 VisionQuiz AI is a full-stack mobile application that captures multiple-choice questions, extracts the visible content, and returns a structured AI-assisted explanation. It demonstrates a practical integration between an Expo client, a typed Node.js API, OpenAI vision models, and shared OpenAPI-generated contracts.
 
 ## What this project demonstrates
@@ -38,7 +40,7 @@ scripts/            Workspace utilities
 
 ## Local setup
 
-Prerequisites: Node.js 20+ and pnpm 9+.
+Prerequisites: Node.js 24+ and pnpm 11.19.0+.
 
 1. Install dependencies:
 
@@ -58,10 +60,10 @@ Prerequisites: Node.js 20+ and pnpm 9+.
 
    ```bash
    pnpm typecheck
-   pnpm build
+   EXPO_PUBLIC_DOMAIN=visionquiz.local pnpm build
    ```
 
-Never embed `OPENAI_API_KEY` in the mobile application or commit a populated `.env` file.
+Use the real public hostname instead of `visionquiz.local` for a deployed mobile build. Never embed `OPENAI_API_KEY` in the mobile application or commit a populated `.env` file.
 
 ## Responsible use
 
